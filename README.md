@@ -56,10 +56,10 @@ Shadab The Hacker......
                 
 <p align="center"> 
   <a href="https://github.com/evildevill/Devil/releases">
-    <img src="https://img.shields.io/badge/release-v3.0.0-blue">
+    <img src="https://img.shields.io/badge/release-v1.0.0-blue">
   </a>
   <a href="https://wikipedia.org/wiki/Shell_script">
-    <img src="https://img.shields.io/badge/language-Python-green.svg">
+    <img src="https://img.shields.io/badge/language-DigiSpark-green.svg">
  </a>
   <a href="https://github.com/evildevill/Devil">
       <img src="https://img.shields.io/badge/issue-0%20open-green">
