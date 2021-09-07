@@ -1,0 +1,44 @@
+#include "DigiKeyboard.h"
+
+void setup() {}
+
+void loop() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.sendKeyStroke(MOD_GUI_LEFT,KEY_R);
+  DigiKeyboard.print("cmd /Q /D /T:0a /F:OFF /V:OFF /K");
+  DigiKeyboard.delay(500);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(750);
+  // DELETE THE SCRIPT IF IT ALREADY EXISTS
+  DigiKeyboard.print("DEL /Q MobileTabs.vbs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  // VB SCRIPT FOUND AT:
+  // http://www.vistaheads.com/forums/microsoft-public-internetexplorer-general/438407-command-line-open-several-websites-multiple-tabs.htmlinternetexplorer
+  // INPUT FILE MobileTabs.vbs
+  DigiKeyboard.print("copy con MobileTabs.vbs");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("on error resume next");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("navOpenInBackgroundTab = &h1000");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("set oIE = CreateObject(\"InternetExplorer.Application\")");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("Set args = WScript.Arguments");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("oIE.Navigate2 args.Item(0)");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("for intx = 1 to args.count");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("oIE.Navigate2 args.Item(intx), navOpenInBackgroundTab");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("next");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("oIE.Visible = true");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.sendKeyStroke(MOD_CONTROL_LEFT,KEY_Z);
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  // RUN THE VB SCRIPT TO LAUNCH INTERNET EXPLORER
+  // THE DOUBLE QUOTES BECOME MORE IMPORTANT FOR LONGER URLs
+  DigiKeyboard.print("MobileTabs.vbs \"http://www.google.com/\" \"http://mwomercs.com/\" \"http://hak5.org/\" \"http://forums.hak5.org/index.php?/forum/56-usb-rubber-ducky/\"");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+}

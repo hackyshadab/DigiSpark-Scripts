@@ -1,0 +1,20 @@
+#include "DigiKeyboard.h"
+
+void setup() {}
+
+void loop() {
+	DigiKeyboard.sendKeyStroke(0);
+	DigiKeyboard.delay(1000);
+	DigiKeyboard.sendKeyStroke(0, MOD_GUI_LEFT,44);
+	DigiKeyboard.print("terminal");
+	DigiKeyboard.delay(500);
+	DigiKeyboard.sendKeyStroke(KEY_ENTER);
+	DigiKeyboard.delay(4000);
+	DigiKeyboard.print("osascript -e 'set volume 7'");
+	DigiKeyboard.delay(500);
+	DigiKeyboard.sendKeyStroke(KEY_ENTER);
+	DigiKeyboard.delay(500);
+	DigiKeyboard.print("open https://www.youtube.com/watch?v=dQw4w9WgXcQ");
+	DigiKeyboard.delay(500);
+	DigiKeyboard.sendKeyStroke(KEY_ENTER);
+}

