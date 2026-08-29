@@ -4,9 +4,8 @@
   <img src="assets/banner.png" alt="DigiSpark Scripts — USB HID Payload Collection" width="100%">
 </a>
 
-# DigiSpark Scripts
 
-### A legacy collection of USB HID / DigiSpark payloads for security research, automation, demonstrations, and controlled lab environments.
+### A collection of USB HID / DigiSpark payloads for security research, automation, demonstrations, and offensive security.
 
 <p>
   <img src="https://img.shields.io/github/stars/hackyshadab/DigiSpark-Scripts?style=for-the-badge" alt="GitHub Stars">
